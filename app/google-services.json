@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "16889959268",
+    "firebase_url": "https://trackthevirus.firebaseio.com",
+    "project_id": "trackthevirus",
+    "storage_bucket": "trackthevirus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16889959268:android:2abb24a9d0e7dfcdea6071",
+        "android_client_info": {
+          "package_name": "development.nk.trackthevirus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16889959268-oh1gqdtas74lkbfag8f908tb5kuljejb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "development.nk.trackthevirus",
+            "certificate_hash": "0aa897585c900b7a03436dc7fe56719a505bf3b1"
+          }
+        },
+        {
+          "client_id": "16889959268-1lslj5b81ni954b6dujopm12amio7fta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtqTo5eqkC9bKHElzXvG1N1HKJXAG3Fpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16889959268-1lslj5b81ni954b6dujopm12amio7fta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,6 @@
 # trackthevirus
 
-Track the Virus
+# Track the Virus
 
 Η εφαρμογή βοηθάει και αυτοματοποιεί την ιχνηλάτηση των επαφών ενός ασθενή.
 

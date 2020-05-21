@@ -4,4 +4,13 @@
     <string name="drawerClose">drawerClose</string>
     <string name="title_activity_new_edit_pelatis">Προσθήκη Ασθενή</string>
     <string name="title_activity_new_edit_plirwmi">Προσθήκη Eπαφής</string>
+    <string name="action_neosAsthenis">Προσθήκη ασθενή</string>
+    <string name="action_neaEpafi">Προσθήκη επαφής</string>
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="action_signout">Αποσύνδεση</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="google_maps_key">AIzaSyDoaGVjszVlCaRe8Ugp6lJQLCw8dNBdJ0g</string>
+
+
 </resources>

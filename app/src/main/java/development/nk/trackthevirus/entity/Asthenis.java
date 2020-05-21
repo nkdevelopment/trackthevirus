@@ -26,15 +26,16 @@ public class Asthenis implements Parcelable {
     private int lowRiskContacts;
     private int mediumRiskContacts;
     private String country;
-    private String geo_lat;
-    private String geo_lan;
+    private double geo_lat;
+    private double geo_lan;
     private String region;
     private String street_name;
     private String street_number;
     private String town;
     private String zip;
-    private long arxiki_imerominia;
+    private long date_long;
     private String paratiriseis;
+
 
 
     /************************* Constructors ***********************************/
@@ -42,8 +43,8 @@ public class Asthenis implements Parcelable {
     public Asthenis(long vat, String name, String surname, String age, String email, String gender,
                     String mobile, int number_of_contacts, String phone_home, String phone_work,
                     int highRiskContacts, int lowRiskContacts, int mediumRiskContacts, String country,
-                    String geo_lat, String geo_lan, String region, String street_name,
-                    String street_number, String town, String zip, long arxiki_imerominia, String paratiriseis) {
+                    double geo_lat, double geo_lan, String region, String street_name,
+                    String street_number, String town, String zip, long date_long, String paratiriseis) {
         this.vat = vat;
         this.name = name;
         this.surname = surname;
@@ -65,8 +66,9 @@ public class Asthenis implements Parcelable {
         this.street_number = street_number;
         this.town = town;
         this.zip = zip;
-        this.arxiki_imerominia = arxiki_imerominia;
+        this.date_long = date_long;
         this.paratiriseis = paratiriseis;
+
     }
 
     public Asthenis(long vat) {
@@ -74,6 +76,10 @@ public class Asthenis implements Parcelable {
     }
 
     public Asthenis() {
+    }
+
+    public Asthenis(String name) {
+        this.name = name;
     }
 
 
@@ -191,19 +197,19 @@ public class Asthenis implements Parcelable {
         this.country = country;
     }
 
-    public String getGeo_lat() {
+    public double getGeo_lat() {
         return geo_lat;
     }
 
-    public void setGeo_lat(String geo_lat) {
+    public void setGeo_lat(double geo_lat) {
         this.geo_lat = geo_lat;
     }
 
-    public String getGeo_lan() {
+    public double getGeo_lan() {
         return geo_lan;
     }
 
-    public void setGeo_lan(String geo_lan) {
+    public void setGeo_lan(double geo_lan) {
         this.geo_lan = geo_lan;
     }
 
@@ -247,12 +253,12 @@ public class Asthenis implements Parcelable {
         this.zip = zip;
     }
 
-    public long getArxiki_imerominia() {
-        return arxiki_imerominia;
+    public long getDate_long() {
+        return date_long;
     }
 
-    public void setArxiki_imerominia(long arxiki_imerominia) {
-        this.arxiki_imerominia = arxiki_imerominia;
+    public void setDate_long(long date_long) {
+        this.date_long = date_long;
     }
 
     public String getParatiriseis() {
@@ -262,6 +268,7 @@ public class Asthenis implements Parcelable {
     public void setParatiriseis(String paratiriseis) {
         this.paratiriseis = paratiriseis;
     }
+
 
 
 
@@ -291,7 +298,7 @@ public class Asthenis implements Parcelable {
                 Objects.equals(getStreet_number(), asthenis.getStreet_number()) &&
                 Objects.equals(getTown(), asthenis.getTown()) &&
                 Objects.equals(getZip(), asthenis.getZip()) &&
-                Objects.equals(getArxiki_imerominia(), asthenis.getArxiki_imerominia()) &&
+                Objects.equals(getDate_long(), asthenis.getDate_long()) &&
                 Objects.equals(getParatiriseis(), asthenis.getParatiriseis());
     }
 
@@ -300,7 +307,7 @@ public class Asthenis implements Parcelable {
         return Objects.hash(getVat(), getName(), getSurname(), getAge(), getEmail(), getGender(), getMobile(),
                 getNumber_of_contacts(), getPhone_home(), getPhone_work(), getHighRiskContacts(), getLowRiskContacts(),
                 getMediumRiskContacts(), getCountry(), getGeo_lat(), getGeo_lan(), getRegion(), getStreet_name(),
-                getStreet_number(), getTown(), getZip(), getArxiki_imerominia(), getParatiriseis());
+                getStreet_number(), getTown(), getZip(), getDate_long(), getParatiriseis());
     }
 
     @Override
@@ -327,7 +334,7 @@ public class Asthenis implements Parcelable {
                 ", street_number='" + street_number + '\'' +
                 ", town='" + town + '\'' +
                 ", zip='" + zip + '\'' +
-                ", arxiki_imerominia='" + arxiki_imerominia + '\'' +
+                ", date_long='" + date_long + '\'' +
                 ", paratiriseis='" + paratiriseis + '\'' +
                 '}';
     }
@@ -349,14 +356,14 @@ public class Asthenis implements Parcelable {
         this.lowRiskContacts = in.readInt();
         this.mediumRiskContacts = in.readInt();
         this.country = in.readString();
-        this.geo_lat = in.readString();
-        this.geo_lan = in.readString();
+        this.geo_lat = in.readDouble();
+        this.geo_lan = in.readDouble();
         this.region = in.readString();
         this.street_name = in.readString();
         this.street_number = in.readString();
         this.town = in.readString();
         this.zip = in.readString();
-        this.arxiki_imerominia = in.readLong();
+        this.date_long = in.readLong();
         this.paratiriseis = in.readString();
     }
 
@@ -381,14 +388,14 @@ public class Asthenis implements Parcelable {
         dest.writeInt(this.lowRiskContacts);
         dest.writeInt(this.mediumRiskContacts);
         dest.writeString(this.country);
-        dest.writeString(this.geo_lat);
-        dest.writeString(this.geo_lan);
+        dest.writeDouble(this.geo_lat);
+        dest.writeDouble(this.geo_lan);
         dest.writeString(this.region);
         dest.writeString(this.street_name);
         dest.writeString(this.street_number);
         dest.writeString(this.town);
         dest.writeString(this.zip);
-        dest.writeLong(this.arxiki_imerominia);
+        dest.writeLong(this.date_long);
         dest.writeString(this.paratiriseis);
     }
 
